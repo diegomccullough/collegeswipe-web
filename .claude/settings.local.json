@@ -1,7 +1,44 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Get-ChildItem *)"
+      "PowerShell(Get-ChildItem *)",
+      "Bash(npx tsc *)",
+      "PowerShell($env:PATH_OVERRIDE = \"C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template\"; Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c cd /d C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template && npm run dev\" -WindowStyle Normal)",
+      "PowerShell(Write-Host \"=== public/images/ ===\" ; Get-ChildItem \"C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\public\\\\images\" -ErrorAction SilentlyContinue | Select-Object Name ; if \\(-not \\(Test-Path \"C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\public\\\\images\"\\)\\) { Write-Host \"\\(directory does not exist\\)\" } ; Write-Host \"\" ; Write-Host \"=== components/ ===\" ; Get-ChildItem \"C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\components\" | Select-Object Name)",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template\\\\components /b\" 2>&1)",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template\\\\public /b /s\" 2>&1)",
+      "PowerShell(cmd /c \"robocopy C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web /E /IS /IT /IM /XD node_modules .git .next /XF package.json package-lock.json 2>&1\")",
+      "PowerShell(cmd /c \"cd /d C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web && npm install tw-animate-css @vercel/analytics lucide-react @radix-ui/react-accordion class-variance-authority clsx tailwind-merge 2>&1\")",
+      "Bash(node -e \"const lr = require\\('lucide-react'\\); console.log\\(Object.keys\\(lr\\).filter\\(k => /twitter|linkedin|instagram|x$/i.test\\(k\\)\\)\\)\")",
+      "Bash(node -e \"const lr = require\\('lucide-react'\\); const keys = Object.keys\\(lr\\).filter\\(k => !k.startsWith\\('Lucide'\\)\\); console.log\\(keys.filter\\(k => /github|gitlab|facebook|tiktok|youtube|discord|slack/i.test\\(k\\)\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(Start-Process *)",
+      "PowerShell(Start-Process \"http://localhost:3000\")",
+      "Bash(npm install *)",
+      "PowerShell(taskkill *)",
+      "PowerShell(head *)",
+      "PowerShell(cmd /c \"dir /s /b C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template 2>&1\")",
+      "PowerShell(cmd /c \"dir /b C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template\\\\components\")",
+      "PowerShell(cmd /c \"dir /b C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\homie-template\\\\public\\\\images 2>&1\")",
+      "PowerShell(cmd /c \"dir /b C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\node_modules\\\\next\\\\dist\\\\docs\\\\ 2>&1\")",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web && npx next dev --help 2>&1\")",
+      "PowerShell(cmd /c \"dir /b C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\public\\\\images\\\\\")",
+      "Bash(node -e \"const {UserCircle, Layers, ListChecks} = require\\('lucide-react'\\); console.log\\('OK'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(grep -o \"1,020\\\\+\\\\|10,000\\\\+\\\\|3 min\\\\|\\\\$0\\\\|Average setup\\\\|UserCircle\\\\|Available now on iOS\\\\|ios-cta\\\\|IosCTA\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(winget install *)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe *)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe auth *)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe repo *)",
+      "Bash(vercel --yes --prod --scope diegomcculloughs-projects)",
+      "Bash(pnpm --version)",
+      "Bash(rm \"C:\\\\Users\\\\DiegoEmanuelMcCullou\\\\Desktop\\\\collegeswipe-web\\\\pnpm-lock.yaml\")",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
