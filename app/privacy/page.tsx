@@ -14,7 +14,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.35)" }}>
-            Last updated: May 2025
+            Effective date: December 30, 2025
           </p>
         </div>
       </section>
@@ -94,7 +94,14 @@ export default function PrivacyPage() {
                 This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
               </p>
               <p className="mt-4">
-                This privacy policy is effective as of May 2025 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+                This privacy policy is effective as of December 30, 2025 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+              </p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 12, letterSpacing: "-0.4px" }}>Your Consent</h2>
+              <p>
+                By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.
               </p>
             </div>
 
