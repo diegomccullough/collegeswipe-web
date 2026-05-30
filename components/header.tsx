@@ -4,6 +4,9 @@ import type React from "react"
 import { useState } from "react"
 import { Menu, X, ArrowUpRight, ArrowRight } from "lucide-react"
 
+const CONTACT_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfa1bM4aGaDHJca19oqvKXXrVg4EFDu0arRGbilfcws6UmIZw/viewform"
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -75,7 +78,18 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href={CONTACT_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-full px-4 py-2 transition-all duration-300"
+              style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.12)", textDecoration: "none" }}
+              onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "#fff"; el.style.borderColor = "rgba(255,255,255,0.25)"; el.style.background = "rgba(255,255,255,0.05)" }}
+              onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "rgba(255,255,255,0.75)"; el.style.borderColor = "rgba(255,255,255,0.12)"; el.style.background = "transparent" }}
+            >
+              Contact
+            </a>
             <a
               href="https://apps.apple.com/app/id6756989742"
               target="_blank"
@@ -129,6 +143,16 @@ export function Header() {
               </a>
             ))}
             <div className="flex flex-col gap-3 mt-2 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <a
+                href={CONTACT_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 rounded-full px-4 py-2 w-fit"
+                style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.12)", textDecoration: "none" }}
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </a>
               <a
                 href="https://apps.apple.com/app/id6756989742"
                 target="_blank"
