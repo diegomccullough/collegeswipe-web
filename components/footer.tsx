@@ -37,11 +37,7 @@ const footerLinks = {
   company: [
     { label: "About", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
-    {
-      label: "Contact",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSfa1bM4aGaDHJca19oqvKXXrVg4EFDu0arRGbilfcws6UmIZw/viewform",
-      external: true,
-    },
+    { label: "Contact", href: "/contact" },
   ],
   legal: [
     { label: "Privacy", href: "/privacy" },
@@ -150,27 +146,14 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.company.map((link, i) => (
                   <li key={i}>
-                    {"external" in link && link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", textDecoration: "none", transition: "color 0.15s" }}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.8)")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)")}
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", textDecoration: "none", transition: "color 0.15s" }}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.8)")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)")}
-                      >
-                        {link.label}
-                      </Link>
-                    )}
+                    <Link
+                      href={link.href}
+                      style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", textDecoration: "none", transition: "color 0.15s" }}
+                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.8)")}
+                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)")}
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
