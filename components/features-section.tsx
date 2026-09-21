@@ -28,6 +28,14 @@ const featureCards = [
     labelColor: "#A855F7",
     glow: "drop-shadow(0 0 50px rgba(107,159,255,0.20))",
   },
+  {
+    title: "Cost Predictor",
+    description: "Compare net price, aid, and projected debt across your list — so you know what each school will actually cost you.",
+    screenshot: "/images/screenshot-search.png",
+    label: "Costs",
+    labelColor: "#3B82F6",
+    glow: "drop-shadow(0 0 50px rgba(59,130,246,0.20))",
+  },
 ]
 
 const features = [
@@ -74,7 +82,7 @@ export function FeaturesSection() {
         </motion.div>
 
         {/* Fix 4 + 7: Feature phones — 280px desktop, 260px mobile, per-card glow */}
-        <div className="grid md:grid-cols-3 gap-10 mb-20">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 mb-20">
           {featureCards.map((card, index) => (
             <motion.div
               key={index}
@@ -86,7 +94,7 @@ export function FeaturesSection() {
             >
               {/* Fix 4: Phone container — w-[260px] mobile, w-[280px] desktop, colored glow */}
               <div
-                className="relative w-[260px] md:w-[320px] mx-auto mb-8"
+                className="relative w-[240px] md:w-[260px] mx-auto mb-8"
                 style={{ filter: card.glow }}
               >
                 {/* Screenshot fills phone body */}
